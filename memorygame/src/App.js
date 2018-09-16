@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import FriendCard from "./components/GaurdianCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
+import Container from "./components/Container";
 import gaurdians from "./gaurdians.json";
 import arrayShuffle from "array-shuffle";
+import Nav from "./components/Nav";
 import "./App.css";
 
 class App extends Component {
@@ -28,7 +29,7 @@ class App extends Component {
   };
 
   handleIncrement = () => {
-   
+
     const newScore = this.state.currentScore + 1;
     console.log("Increment counter " + newScore);
     this.setState({
@@ -49,7 +50,7 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      rightWrong: "Glaven!",
+      rightWrong: "You loose!",
       clicked: []
     });
     this.handleShuffle();
@@ -64,7 +65,13 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Gaurdians of the Galaxy</Title>
+        <Nav
+          title="Gaurdians of the Galaxy Clicky Game"
+          score={this.state.currentScore}
+          topScore={this.state.topScore}
+          rightWrong={this.state.rightWrong}
+        />
+       <Container>
         {this.state.gaurdians.map(gaurdian => (
           <FriendCard
             key={gaurdian.id}
@@ -76,6 +83,7 @@ class App extends Component {
             image={gaurdian.image}
           />
         ))}
+        </Container>
       </Wrapper>
     );
   }

@@ -4,18 +4,20 @@ import "./GaurdianCard.css";
 
 
 const GaurdianCard = props => (
-  <div
-    className="card"
-    value={props.id}
-    onClick={() => props.handleClick(props.id)}
-  >
-    <div className="card-img">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
+  
+    <div
+      className="card"
+      value={props.id}
+      onClick={() => props.handleClick(props.id)}
+    >
+      <div className="card-img">
+        <div className="img-container">
+          <img alt={props.name} src={props.image} />
 
+        </div>
       </div>
     </div>
-  </div>
+  
 );
 
 export default GaurdianCard;
