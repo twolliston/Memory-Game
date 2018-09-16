@@ -5,6 +5,8 @@ import Container from "./components/Container";
 import gaurdians from "./gaurdians.json";
 import arrayShuffle from "array-shuffle";
 import Nav from "./components/Nav";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./App.css";
 
 class App extends Component {
@@ -71,20 +73,24 @@ class App extends Component {
           topScore={this.state.topScore}
           rightWrong={this.state.rightWrong}
         />
-       <Container>
-        {this.state.gaurdians.map(gaurdian => (
-          <FriendCard
-            key={gaurdian.id}
-            handleClick={this.handleClick}
-            handleIncrement={this.handleIncrement}
-            handleReset={this.handleReset}
-            handleShuffle={this.handleShuffle}
-            id={gaurdian.id}
-            image={gaurdian.image}
-          />
-        ))}
+        <Header/>
+        <Container>
+          {this.state.gaurdians.map(gaurdian => (
+            <FriendCard
+              key={gaurdian.id}
+              handleClick={this.handleClick}
+              handleIncrement={this.handleIncrement}
+              handleReset={this.handleReset}
+              handleShuffle={this.handleShuffle}
+              id={gaurdian.id}
+              image={gaurdian.image}
+            />
+          ))}
         </Container>
+        <Footer/>
       </Wrapper>
+      
+     
     );
   }
 }
