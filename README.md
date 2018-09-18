@@ -51,6 +51,6 @@ How good is your memory. Click on an image to earn points, but don't click on an
 
 
 ## Try the memory game
-https://minneolamike.github.io/Group-Project-1/
+https://twolliston.github.io/Memory-Game/
 
 - - -
