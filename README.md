@@ -28,7 +28,7 @@ How good is your memory. Click on an image to earn points, but don't click on an
 
 - - -
 ## Screenshot
-![Memory Game](memorygame/memory_game.gif)
+![Memory Game](memorygame.gif)
 
 ## Technologies Used
 * HTML
