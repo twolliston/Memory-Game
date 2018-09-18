@@ -37,20 +37,20 @@
     },
     {
         "id": 7,
-        "name": "Black Widow",
-        "image": "http://i.annihil.us/u/prod/marvel/i/mg/f/30/50fecad1f395b.jpg",
+        "name": "Ego",
+        "image": "http://i.annihil.us/u/prod/marvel/i/mg/c/d0/535fec6d62b7f.jpg",
         "clicked": false
     },
     {
         "id": 8,
-        "name": "Jean Grey",
-        "image": "http://i.annihil.us/u/prod/marvel/i/mg/f/30/4bc654cf9d0ac.jpg",
+        "name": "Mantis",
+        "image": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/52740fa12e826.jpg",
         "clicked": false
     },
     {
         "id": 9,
-        "name": "Wasp",
-        "image": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/5390dfd5ef165.jpg",
+        "name": "Thanos",
+        "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd.jpg",
         "clicked": false
     },
     {

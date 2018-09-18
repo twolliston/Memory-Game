@@ -16,6 +16,7 @@ class App extends Component {
     currentScore: 0,
     topScore: 0,
     rightWrong: "",
+    reStart: "",
     clicked: [],
   };
 
@@ -36,13 +37,18 @@ class App extends Component {
     console.log("Increment counter " + newScore);
     this.setState({
       currentScore: newScore,
-      rightWrong: ""
+      rightWrong: "",
+      reStart: ""
     });
-    if (newScore >= this.state.topScore) {
-      this.setState({ topScore: newScore });
-    }
-    else if (newScore === 12) {
+
+    // console.log("New Score: " + newScore + " Top Score: " + this.state.topScore);
+    if (newScore === 12) {
       this.setState({ rightWrong: "You win!" });
+      this.setState({ topScore: newScore });
+      this.setState({ reStart: "Restart" });
+    }
+    else if (newScore >= this.state.topScore) {
+      this.setState({ topScore: newScore });
     }
     this.handleShuffle();
   };
@@ -52,11 +58,13 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      rightWrong: "You loose!",
+      rightWrong: "You lose!",
+      reStart: "",
       clicked: []
     });
     this.handleShuffle();
   };
+
 
   handleShuffle = () => {
     let shuffledGaurdians = arrayShuffle(gaurdians);;
@@ -68,12 +76,13 @@ class App extends Component {
     return (
       <Wrapper>
         <Nav
-          title="Gaurdians of the Galaxy Clicky Game"
+          title="Marvel Memory Game"
           score={this.state.currentScore}
           topScore={this.state.topScore}
           rightWrong={this.state.rightWrong}
+          reStart={this.state.reStart}
         />
-        <Header/>
+        <Header />
         <Container>
           {this.state.gaurdians.map(gaurdian => (
             <FriendCard
@@ -87,10 +96,10 @@ class App extends Component {
             />
           ))}
         </Container>
-        <Footer/>
+        <Footer />
       </Wrapper>
-      
-     
+
+
     );
   }
 }
